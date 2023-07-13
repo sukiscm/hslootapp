@@ -1,9 +1,13 @@
 import { Box, Button, Typography } from '@mui/material'
 import { DataGrid, GridToolbar, GridToolbarColumnsButton, GridToolbarContainer, GridToolbarDensitySelector, GridToolbarExport, GridToolbarFilterButton, esES } from '@mui/x-data-grid'
-import React from 'react'
+import React, { useState } from 'react'
+import { DialogSelectPersona } from './DialogSelectPersona';
 import ItemPool from '../../assets/ItemPool';
-console.log(ItemPool)
 export const TablaItem = () => {
+  const [DialogVisibility, setDialogVisibility] = useState({visibile:false,itemInfo:''})
+  const cerrarDialog=()=>{
+    setDialogVisibility({visible:false})
+  }
     const customGridToolB=()=>{
         return(
             <GridToolbarContainer >
@@ -21,7 +25,7 @@ export const TablaItem = () => {
         { field: 'origen', headerName: 'JEFE', width: 500 },
         { field: 'tipo', headerName: 'CASILLA', width: 300 },
         { field: 'ENTREGAR', headerName: 'ENTREGAR', width: 170,  renderCell: (params) => (
-          <Button  variant='text' color='inherit'>
+          <Button  variant='text' color='inherit' onClick={e=>setDialogVisibility({visibile:true,itemInfo:params.row})}>
             Entregar A:
           </Button>
         ), },
@@ -47,6 +51,7 @@ export const TablaItem = () => {
       }}
       localeText={esES.components.MuiDataGrid.defaultProps.localeText}
     />
+    <DialogSelectPersona visible={DialogVisibility.visibile} cerrar={cerrarDialog} itemInfo={DialogVisibility.itemInfo}/>
 </Box>
   )
 }

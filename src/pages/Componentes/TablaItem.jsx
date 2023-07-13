@@ -1,13 +1,17 @@
 import { Box, Button, Typography } from '@mui/material'
 import { DataGrid, GridToolbar, GridToolbarColumnsButton, GridToolbarContainer, GridToolbarDensitySelector, GridToolbarExport, GridToolbarFilterButton, esES } from '@mui/x-data-grid'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { DialogSelectPersona } from './DialogSelectPersona';
 import ItemPool from '../../assets/ItemPool';
-export const TablaItem = () => {
+export const TablaItem = ({setTrigger,trigger}) => {
   const [DialogVisibility, setDialogVisibility] = useState({visibile:false,itemInfo:''})
   const cerrarDialog=()=>{
     setDialogVisibility({visible:false})
   }
+  useEffect(() => {
+    setTrigger(!trigger)
+  }, [DialogVisibility])
+  
     const customGridToolB=()=>{
         return(
             <GridToolbarContainer >
@@ -51,7 +55,8 @@ export const TablaItem = () => {
       }}
       localeText={esES.components.MuiDataGrid.defaultProps.localeText}
     />
-    <DialogSelectPersona visible={DialogVisibility.visibile} cerrar={cerrarDialog} itemInfo={DialogVisibility.itemInfo}/>
+    {DialogVisibility.visibile===true?<DialogSelectPersona visible={DialogVisibility.visibile} cerrar={cerrarDialog} itemInfo={DialogVisibility.itemInfo}/>:<></>}
+    
 </Box>
   )
 }

@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { LogoHdS } from './Componentes/LogoHdS'
-import { TablaItem } from './Componentes/tablaItem'
+import { TablaItem } from './Componentes/TablaItem'
 import img from '../assets/hds.png';
 import { TablaChipapijas } from './Componentes/TablaChipapijas';
 export const App = () => {

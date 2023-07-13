@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "serve dist -s -n -L -p $PORT"
+    "start": "server dist -s -n -L -p $PORT"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -18,7 +18,8 @@
     "@mui/x-data-grid": "^6.9.2",
     "@reduxjs/toolkit": "^1.9.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "serve": "^14.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

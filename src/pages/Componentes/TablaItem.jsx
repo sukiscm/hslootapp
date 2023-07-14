@@ -29,7 +29,7 @@ export const TablaItem = ({setTrigger,trigger}) => {
         { field: 'origen', headerName: 'JEFE', width: 500 },
         { field: 'tipo', headerName: 'CASILLA', width: 300 },
         { field: 'ENTREGAR', headerName: 'ENTREGAR', width: 170,  renderCell: (params) => (
-          <Button  variant='text' color='inherit' onClick={e=>setDialogVisibility({visibile:true,itemInfo:params.row})}>
+          <Button  variant='contained' color='warning' onClick={e=>setDialogVisibility({visibile:true,itemInfo:params.row})}>
             Entregar A:
           </Button>
         ), },
@@ -41,7 +41,7 @@ export const TablaItem = ({setTrigger,trigger}) => {
             Tabla Items 
         </Typography>
     <DataGrid
-    density="compact"
+    density="standard"
     columnVisibilityModel={{
       // Hide columns status and traderName, the other columns will remain visible
       id: false,

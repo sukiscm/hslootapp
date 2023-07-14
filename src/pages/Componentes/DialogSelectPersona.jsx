@@ -3,13 +3,14 @@ import React, { useEffect, useState } from 'react'
 import { Formulario } from './Formulario'
 
 export const DialogSelectPersona = ({visible,cerrar,itemInfo}) => {
-  const [formData, setFormData] = useState({itemName:'',coment:'',ppl:'',id:''})
+  const [formData, setFormData] = useState({itemName:'',casilla:'',coment:'',ppl:'',id:''})
   useEffect(() => {
     if(!!itemInfo){
 
       setFormData((prevFormData)=>({
         ...prevFormData,
-        itemName:itemInfo.nombre
+        itemName:itemInfo.nombre,
+        casilla:itemInfo.tipo,
       }))
     }
   }, [itemInfo])
@@ -23,11 +24,8 @@ export const DialogSelectPersona = ({visible,cerrar,itemInfo}) => {
       const prevArray = JSON.parse(localStorage.getItem('itemLinks'));
       const prevIdNumber = localStorage.getItem('idItem') ? parseInt(localStorage.getItem('idItem')) : 0;
       const newId = prevIdNumber + 1;
-  
-      const updatedFormData = { ...formData, id: newId }; // Crear una copia de formData con la ID actualizada
-  
+      const updatedFormData = { ...formData, id: newId}; // Crear una copia de formData con la ID actualizada
       setFormData(updatedFormData); // Actualizar el estado de formData
-  
       localStorage.setItem('itemLinks', JSON.stringify([...prevArray, updatedFormData])); // Guardar la copia actualizada en el localStorage
       localStorage.setItem('idItem', newId.toString()); // Convertir a cadena antes de guardar
     } else {

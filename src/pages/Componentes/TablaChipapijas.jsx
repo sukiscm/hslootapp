@@ -17,6 +17,7 @@ export const TablaChipapijas = ({row,setTrigger,trigger}) => {
     const columns = [
         { field: 'id', headerName: 'ID', width: 170, hide: true},
         { field: 'ppl', headerName: 'NOMBRE', width: 170 },
+        { field: 'casilla', headerName: 'Casilla', width: 170 },
         { field: 'itemName', headerName: 'ITEM', width: 500 },
         { field: 'coment', headerName: 'COMENTARIO', width: 500 },
         { field: 'borrar', headerName: 'BORRAR', width: 100,renderCell: (params) => (
@@ -62,6 +63,9 @@ columnVisibilityModel={{
   }}
   localeText={esES.components.MuiDataGrid.defaultProps.localeText}
 />
+<Typography sx={{fontSize:'.2rem'}}>Puto Corbi y Teoden</Typography>
+<Typography sx={{fontSize:'.1rem'}}>Power By: SukisCM</Typography>
+
 </Box>
   )
 }

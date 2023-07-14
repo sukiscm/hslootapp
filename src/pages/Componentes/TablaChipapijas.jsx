@@ -45,7 +45,7 @@ export const TablaChipapijas = ({row,setTrigger,trigger}) => {
   return (
     <Box  sx={{width:'80vw',height:'50vh',backgroundColor:'wh'}}>
     <Typography variant='h3' color={'white'}>
-        Tabla Guild <Button variant='contained' color='error' startIcon={<DeleteOutlineIcon/>} onClick={handleClearLocalStorage}>Borrar Tabla</Button>
+        Tabla Guild Sunna <Button variant='contained' color='error' startIcon={<DeleteOutlineIcon/>} onClick={handleClearLocalStorage}>Borrar Tabla</Button>
     </Typography>
     
 <DataGrid

@@ -38,7 +38,7 @@ export const TablaItem = ({setTrigger,trigger}) => {
   return (
     <Box  sx={{width:'80vw',height:'50vh',backgroundColor:'wh'}}>
         <Typography variant='h3' color={'white'}>
-            Tabla Items 
+            Tabla Items de TOC 
         </Typography>
     <DataGrid
     density="standard"

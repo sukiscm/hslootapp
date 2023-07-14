@@ -23,10 +23,10 @@ export const TablaItem = ({setTrigger,trigger}) => {
             )
     }
     const columns = [
-        { field: 'id', headerName: 'ID', width: 170 },
-        { field: 'nombre', headerName: 'NOMBRE', width: 300 },
-        { field: 'nivel', headerName: 'MODO', width: 170 },
-        { field: 'origen', headerName: 'JEFE', width: 500 },
+        { field: 'id', headerName: 'ID', width: 170,headerAlign: 'center',  },
+        { field: 'nombre', headerName: 'NOMBRE', width: 300,headerAlign: 'center',  },
+        { field: 'nivel', headerName: 'MODO', width: 170,headerAlign: 'center',  },
+        { field: 'origen', headerName: 'JEFE', width: 500,headerAlign: 'center', },
         { field: 'tipo', headerName: 'CASILLA', width: 300 },
         { field: 'ENTREGAR', headerName: 'ENTREGAR', width: 170,  renderCell: (params) => (
           <Button  variant='contained' color='warning' onClick={e=>setDialogVisibility({visibile:true,itemInfo:params.row})}>

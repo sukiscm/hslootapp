@@ -50,12 +50,12 @@ export const DialogSelectPersona = ({visible,cerrar,itemInfo}) => {
         {!!itemInfo?(`${itemInfo.nombre},${itemInfo.origen},${itemInfo.tipo}`):<></>}
       </Typography>
     </DialogTitle>
-    <DialogContent sx={{width:"90vw"}}>
+    <DialogContent sx={{width:"90vw",height:"50vh"}}>
  
         <Formulario setFormData={setFormData}/>
     </DialogContent>
-    <DialogActions>
-      <Button onClick={cerrar}>Disagree</Button>
+    <DialogActions sx={{justifyContent:'center'}}>
+      <Button onClick={cerrar}>CANCELAR</Button>
       <Button onClick={handleSendInfo} autoFocus>
         Guardar
       </Button>

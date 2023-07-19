@@ -47,6 +47,9 @@ const guildppl= [
     { "id": 46, "label": "NOLVAIR" },
     { "id": 47, "label": "DOSURIN" },
     { "id": 48, "label": "LIYA" },
-    { "id": 49, "label": "MONKEYDILUFY" }
+    { "id": 49, "label": "Jetblackk" },
+    { "id": 50, "label": "Caeliz" },
+    { "id": 51, "label": "Teoden" }
+    
   ]
   export default guildppl;
